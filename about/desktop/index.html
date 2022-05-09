@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from tetr.io/about/desktop/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 09 May 2022 00:54:14 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<title>DESKTOP - TETR.IO</title>
+	<link rel="stylesheet" type="text/css" href="../style.css">
+	<meta charset="utf-8">
+
+	<!-- Matomo -->
+	<script type="text/javascript">
+	  var _paq = window._paq || [];
+	  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+	  const uid = localStorage.getItem('moonKagariUsername') || localStorage.getItem('lastUsername');
+	  if (uid && (uid !== 'X-ANON')) {
+	  	_paq.push(['setUserId', uid]);
+	  }
+	  _paq.push(['trackPageView']);
+	  _paq.push(['enableLinkTracking']);
+	  (function() {
+	    var u="http://moon.kagari.moe/";
+	    _paq.push(['setTrackerUrl', u+'matomo.php']);
+	    _paq.push(['setSiteId', '3']);
+	    _paq.push(['enableHeartBeatTimer']);
+	    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+	    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+	  })();
+	</script>
+	<!-- End Matomo Code -->
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			setInterval(() => {
+				if (document.getElementById('vid').currentTime >= 12.15) {
+					document.getElementById('vid').currentTime -= 12.15;
+				}
+			}, 50);
+		}, false);
+	</script>
+	<style>
+		#mass {
+			background-color: #161A2A;
+			background-image: url('../../res/about/about-bg.png');
+			background-size: cover;
+			border-radius: 3px;
+			box-shadow: 0px 2px 4px #0004;
+			padding: 5vw 2vw;
+			vertical-align: top;
+			text-align: left;
+			position: relative;
+		}
+
+		#mass h1 {
+			font-family: 'HUN';
+			color: #FFF;
+			font-size: 3vw;
+			text-shadow: 0px 2px 4px #0008;
+			margin: 0;
+		}
+
+		#vid {
+			position: absolute;
+			right: 1vw;
+			top: 50%;
+			transform: translateY(-45%) perspective(500px) rotate3d(0, 1, 0, -4deg);
+			pointer-events: none;
+			width: 40vw;
+			height: 21.1521vw;
+			will-change: transform;
+			animation: 10s wobble ease-in-out infinite alternate;
+		}
+
+		#vidbg {
+			position: absolute;
+			right: 1vw;
+			top: 50%;
+			transform: translateY(-45%) perspective(500px) rotate3d(0, 1, 0, -4deg);
+			pointer-events: none;
+			width: 40vw;
+			height: 21.1521vw;
+			background: #000;
+			will-change: transform;
+			animation: 10s wobble ease-in-out infinite alternate;
+		}
+		#vidbg::after {
+			content: '';
+			position: absolute;
+			background: url('../../res/about/desktop-frame.png');
+			background-size: 100% 100%;
+			left: -0.9852%;
+			right: -0.9852%;
+			bottom: -1.8605%;
+			top: -10.6977%;
+		}
+
+		@keyframes wobble {
+			from {
+				transform: translateY(-45%) perspective(400px) rotate3d(0, 1, 0, -2deg);
+			}
+			to {
+				transform: translateY(-45%) perspective(400px) rotate3d(0, 1, 0, -6deg);
+			}
+		}
+
+		#get_recommended {
+			display: inline-block;
+			background: #FFF;
+			border-radius: 3px;
+			margin: 0.5em 0;
+			padding: 0.6em 2em;
+			padding-bottom: 0.3em;
+			color: #785CA8;
+			box-shadow: 0px 6px #FFF8, 0px 6px 4px #0008;
+			cursor: pointer;
+			font-family: 'HUN';
+			font-size: 1.5vw;
+			font-weight: 900;
+			transform: translateY(0px);
+			transition: 0.3s transform, 0.3s box-shadow;
+			text-decoration: none;
+		}
+		#get_recommended:hover {
+			box-shadow: 0px 4px #FFF8, 0px 4px 4px #0008;
+			transform: translateY(2px);
+		}
+		#get_recommended:active {
+			box-shadow: 0px 1px #FFF8, 0px 1px 2px #0008;
+			transform: translateY(5px);
+			transition: 0.05s transform, 0.05s box-shadow;
+		}
+
+		#get_about {
+			margin: 0;
+			font-family: 'HUN';
+			font-size: 0.75vw;
+			opacity: 0.5;
+		}
+
+		#gplink {
+			color: #3B456E;
+			font-family: 'HUN';
+			margin: 0.5em;
+			font-size: 0.8em;
+		}
+		#gplink a {
+			color: #4C5DA1;
+			text-decoration: none;
+			font-weight: 900;
+		}
+		#gplink a:hover {
+			color: #FFF;
+		}
+
+		.pbh {
+			padding: 0 !important;
+			color: #3B456E;
+			text-align: center !important;
+			font-weight: 900;
+			background: linear-gradient(to bottom, #0002 0%, #0000 100%) !important;
+			box-shadow: none !important;
+			font-size: 1.5em;
+		}
+
+		.spanner {
+			height: 2vw;
+		}
+
+		.feature {
+			vertical-align: middle;
+			padding: 0.5em 1.5em !important;
+		}
+		.feature span {
+			line-height: 2em;
+			font-size: 1.5em;
+		}
+		.feature span span {
+			line-height: 0em;
+			font-size: 0.75em;
+		}
+		.feature img {
+			margin: -1em;
+			margin-right: 0.5em;
+			height: 3em;
+		}
+
+		.warning {
+			background: repeating-linear-gradient(-45deg, #161A2A 0px, #161A2A 5px, #1C233D 5px, #1C233D 10px) !important;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<a class="major_item pi_play" href="../../index.html">PLAY</a>
+		<a class="major_item pi_ch" href="https://ch.tetr.io/">TETRA CHANNEL</a>
+		<a class="major_item pi_about active" href="../index.html">ABOUT</a>
+
+		<a class="major_item_r" target="_blank" title="Support TETR.IO or gift supporter status and get cool benefits!" href="https://l.tetr.io/support">ǹ</a>
+		<a class="major_item_r" target="_blank" title="View the TETR.IO issue tracker - report bugs and pitch ideas to improve TETR.IO" href="https://github.com/tetrio/issues">Ǻ</a>
+		<a class="major_item_r" target="_blank" title="Join the TETR.IO Discord - follow updates, give feedback and have fun" href="https://l.tetr.io/discord">ǻ</a>
+		<a class="major_item_r" target="_blank" title="Follow TETR.IO on Twitter - be the first to hear about updates" href="https://twitter.com/tetriogame">Ǽ</a>
+		<a class="major_item_r" target="_blank" title="Get TETR.IO Desktop" href="index.html">Ǿ</a>
+	</header>
+	<img id="major_logo" src="../../res/logo.png" />
+
+	<div class="panel">
+		<a href="../index.html"><div id="back">BACK</div></a>
+		
+		<div id="mass">
+			<h1 class="ns">TETR.IO DESKTOP</h1>
+			<a id="get_recommended" class="ns" href="builds/TETR.IO%20Setup.exe">GET FOR WINDOWS</a>
+			<div id="get_about" class="ns">WINDOWS 7 AND UP</div>
+			<div id="vidbg" class="ns"></div>
+			<video id="vid" src="../../res/about/desktop-video.webm" poster="../../res/about/desktop-video-poster.png" class="ns" autoplay muted></video>
+		</div>
+		<div id="gplink">GAMEPLAY BY YUIOP123</div>
+
+		<div class="spanner"></div>
+
+		<h1>ALL PLATFORMS</h1>
+		<table>
+			<tr>
+				<td class="pbh" colspan="2">WINDOWS</td>
+				<td class="pbh" colspan="2">LINUX</td>
+				<td class="pbh" colspan="2">MAC</td>
+			</tr>
+			<tr>
+				<td class="pb" colspan="2"><a class="pagebutton dl" href="builds/TETR.IO%20Setup.exe">DOWNLOAD</a></td>
+				<td class="pb"><a class="pagebutton dl" href="builds/TETR.IO%20Setup.deb">.DEB</a></td>
+				<td class="pb"><a class="pagebutton dl" href="builds/TETR.IO%20Setup.tar.gzip">.TAR.GZ</a></td>
+				<td class="pb" colspan="2"><a class="pagebutton dl" href="builds/TETR.IO%20Setup.dmg">DOWNLOAD</a></td>
+			</tr>
+		</table>
+
+		<table>
+			<tr>
+				<td class="warning long">TETR.IO Desktop is <b>experimental software</b> &mdash; it is provided "as is" and no warranty of any kind is attached. However, please <a href="https://github.com/tetrio/issues">report bugs and issues</a> when you see them!<br>Furthermore, these installers are <b>not signed</b>. You may get a warning like "SmartScreen protected your PC", or have to allow unsigned apps on Mac. This is temporary.</td>
+			</tr>
+		</table>
+
+		<h1>FEATURES</h1>
+		<table>
+			<tr>
+				<td class="feature"><img src="../../res/about/feature-perf.png" /><span><b>Better performance</b> on most devices &mdash; performance patches pre-applied <span>(see also the <a href="../performance/index.html" class="lna">performance tips</a>)</span></span></td>
+			</tr>
+			<tr>
+				<td class="feature"><img src="../../res/about/feature-discord.png" /><span><b>Discord Rich Presence</b> integration &mdash; show what you're playing</span></td>
+			</tr>
+			<tr>
+				<td class="feature"><img src="../../res/about/feature-loginskip.png" /><span><b>Skip the login screen</b> and get in the game quicker</span></td>
+			</tr>
+			<tr>
+				<td class="feature"><img src="../../res/about/feature-taskbar.png" /><span>Place TETR.IO in the <b>Start Menu and taskbar</b></span></td>
+			</tr>
+			<!--
+				Hiding this for a while because it seems to be bugged and I currently do not have
+				the time or energy to investigate it.
+				<tr>
+					<td class="feature"><img src="/res/about/feature-offline.png" /><span>Play singleplayer modes <b>without an Internet connection</b></span></td>
+				</tr>
+			-->
+			<tr>
+				<td class="feature"><img src="../../res/about/feature-nobs.png" /><span><b>No BS</b> &mdash; no background processes or spyware, just TETR.IO in a nice client with some extra features</span></td>
+			</tr>
+		</table>
+	</div>
+</body>
+
+<!-- Mirrored from tetr.io/about/desktop/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 09 May 2022 00:54:18 GMT -->
+</html>

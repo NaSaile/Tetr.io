@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from tetr.io/about/patchnotes/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 09 May 2022 00:54:24 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<title>PATCH NOTES - TETR.IO</title>
+	<link rel="stylesheet" type="text/css" href="../style.css">
+	<meta charset="utf-8">
+
+	<script>
+		const xhr = {
+			send: (method, url, body) => {
+				return new Promise((resolve, reject) => {
+					const request = new XMLHttpRequest();
+					request.open(method, url, true);
+
+					request.onload = () => {
+						if (request.readyState === 4) {
+							const json = JSON.parse(request.responseText);
+
+							resolve(json);
+						}
+					};
+					request.onerror = () => {
+						reject({
+							success: false,
+							errors: [{ msg: 'a connection error has occured' }]
+						});
+					};
+
+					request.send(JSON.stringify(body));
+				});
+			},
+			get: (url, data) => {
+				let hasTags = false;
+				Object.keys(data).forEach((k) => {
+					url += `${ hasTags ? '&' : '?' }${ k }=${ data[k] }`;
+					hasTags = true;
+				});
+
+				return xhr.send('GET', url, []);
+			}
+		};
+
+		function SanitizeHTML(string) {
+			const temp = document.createElement('div');
+			temp.textContent = string;
+			return temp.innerHTML.replace(/"/g, '&quot;').replace(/'/g, '&apos;');
+		}
+
+		window.addEventListener('DOMContentLoaded', (e) => {
+			xhr.get('/about/patchnotes/notes.json', {}).then((result) => {
+				document.getElementById('loader').innerHTML = 'Please consider <a href="https://l.tetr.io/support" target="_blank" class="lna">supporting the sole developer behind TETR.IO</a>!';
+
+				let chlog = '';
+
+				Object.keys(result).forEach((k) => {
+					chlog += `<tr><td class="changelog_item" id="chlog_${ k.replace(/[^0-9a-z\-\_]/gi, '_') }">
+						<h1><a href="#chlog_${ k.replace(/[^0-9a-z\-\_]/gi, '_') }" class="vanchor">${ k }</a></h1>
+						<h6>${ result[k].ts }</h6>`;
+
+					result[k].contents.forEach((li) => {
+						if (li.header) {
+							chlog += `<h2 style="color: ${ li.color };" data-content="${ li.header }">${ li.header }</h2>`;
+						}
+						chlog += `<p>${ li.items.join('</p><p>') }</p>`;
+					});
+
+					chlog += '</td></tr>';
+				});
+
+				document.getElementById('changelog').innerHTML = chlog;
+
+				if (location.hash) {
+					document.getElementById(location.hash.substring(1)).scrollIntoView({
+						behavior: 'smooth',
+						block: 'center'
+					});
+				}
+			}, (result) => {
+				document.getElementById('loader').innerHTML = 'An error has occured.';
+			});
+		});
+	</script>
+
+	<!-- Matomo -->
+	<script type="text/javascript">
+	  var _paq = window._paq || [];
+	  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+	  const uid = localStorage.getItem('moonKagariUsername') || localStorage.getItem('lastUsername');
+	  if (uid && (uid !== 'X-ANON')) {
+	  	_paq.push(['setUserId', uid]);
+	  }
+	  _paq.push(['trackPageView']);
+	  _paq.push(['enableLinkTracking']);
+	  (function() {
+	    var u="http://moon.kagari.moe/";
+	    _paq.push(['setTrackerUrl', u+'matomo.php']);
+	    _paq.push(['setSiteId', '3']);
+	    _paq.push(['enableHeartBeatTimer']);
+	    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+	    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+	  })();
+	</script>
+	<!-- End Matomo Code -->
+</head>
+<body>
+	<header>
+		<a class="major_item pi_play" href="../../index.html">PLAY</a>
+		<a class="major_item pi_ch" href="https://ch.tetr.io/">TETRA CHANNEL</a>
+		<a class="major_item pi_about active" href="../index.html">ABOUT</a>
+
+		<a class="major_item_r" target="_blank" title="Support TETR.IO or gift supporter status and get cool benefits!" href="https://l.tetr.io/support">ǹ</a>
+		<a class="major_item_r" target="_blank" title="View the TETR.IO issue tracker - report bugs and pitch ideas to improve TETR.IO" href="https://github.com/tetrio/issues">Ǻ</a>
+		<a class="major_item_r" target="_blank" title="Join the TETR.IO Discord - follow updates, give feedback and have fun" href="https://l.tetr.io/discord">ǻ</a>
+		<a class="major_item_r" target="_blank" title="Follow TETR.IO on Twitter - be the first to hear about updates" href="https://twitter.com/tetriogame">Ǽ</a>
+		<a class="major_item_r" target="_blank" title="Get TETR.IO Desktop" href="../desktop/index.html">Ǿ</a>
+	</header>
+	<img id="major_logo" src="../../res/logo.png" />
+
+	<div class="panel">
+		<a href="../index.html"><div id="back">BACK</div></a>
+		<h1>PATCH NOTES</h1>
+		<p id="loader">Loading patch notes...</p>
+		<table id="changelog"></table>
+	</div>
+</body>
+
+<!-- Mirrored from tetr.io/about/patchnotes/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 09 May 2022 00:54:24 GMT -->
+</html>

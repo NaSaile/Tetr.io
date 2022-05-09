@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from tetr.io/about/performance/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 09 May 2022 00:54:24 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<title>PERFORMANCE TIPS - TETR.IO</title>
+	<link rel="stylesheet" type="text/css" href="../style.css">
+	<meta charset="utf-8">
+
+	<!-- Matomo -->
+	<script type="text/javascript">
+	  var _paq = window._paq || [];
+	  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+	  const uid = localStorage.getItem('moonKagariUsername') || localStorage.getItem('lastUsername');
+	  if (uid && (uid !== 'X-ANON')) {
+	  	_paq.push(['setUserId', uid]);
+	  }
+	  _paq.push(['trackPageView']);
+	  _paq.push(['enableLinkTracking']);
+	  (function() {
+	    var u="http://moon.kagari.moe/";
+	    _paq.push(['setTrackerUrl', u+'matomo.php']);
+	    _paq.push(['setSiteId', '3']);
+	    _paq.push(['enableHeartBeatTimer']);
+	    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+	    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+	  })();
+	</script>
+	<!-- End Matomo Code -->
+</head>
+<body>
+	<header>
+		<a class="major_item pi_play" href="../../index.html">PLAY</a>
+		<a class="major_item pi_ch" href="https://ch.tetr.io/">TETRA CHANNEL</a>
+		<a class="major_item pi_about active" href="../index.html">ABOUT</a>
+
+		<a class="major_item_r" target="_blank" title="Support TETR.IO or gift supporter status and get cool benefits!" href="https://l.tetr.io/support">ǹ</a>
+		<a class="major_item_r" target="_blank" title="View the TETR.IO issue tracker - report bugs and pitch ideas to improve TETR.IO" href="https://github.com/tetrio/issues">Ǻ</a>
+		<a class="major_item_r" target="_blank" title="Join the TETR.IO Discord - follow updates, give feedback and have fun" href="https://l.tetr.io/discord">ǻ</a>
+		<a class="major_item_r" target="_blank" title="Follow TETR.IO on Twitter - be the first to hear about updates" href="https://twitter.com/tetriogame">Ǽ</a>
+		<a class="major_item_r" target="_blank" title="Get TETR.IO Desktop" href="../desktop/index.html">Ǿ</a>
+	</header>
+	<img id="major_logo" src="../../res/logo.png" />
+
+	<div class="panel">
+		<a href="../index.html"><div id="back">BACK</div></a>
+		<h1>PERFORMANCE TIPS</h1>
+		<table>
+			<tr>
+				<td class="long">
+					<p>Compared to other browser-based games, TETR.IO tries to give you a full-fledged desktop experience. Lower-class devices might have trouble playing the game on default settings. But don't worry, there's a lot of tips on this page that may help you! They're sorted by how much you have to compromise to get good performance.</p>
+					<h1>1. Use TETR.IO Desktop</h1>
+					<p>The shiny desktop client for TETR.IO applies a bunch of performance patches for you, and tends to give far, <b>FAR</b> better performance. <a href="../desktop/index.html">Download it here.</a></p>
+					<h1>2. Try a different browser</h1>
+					<p>Chrome and Chromium-based browsers are generally the fastest browsers for games. If you're not using Chrome, try using it over Firefox, as the speed increase will be noticable. (Or, use the <a href="../desktop/index.html">desktop client</a> instead!)</p>
+					<h1>3. Check your power savings settings</h1>
+					<p>Many laptops are by default set to battery savings modes, especially when not charging. Check to ensure your PC is set to high performance mode, and not some battery saving mode, to ensure you're not missing out on performance.</p>
+					<h1>4. Ensure your browser/TETR.IO Desktop is using your GPU</h1>
+					<p>If you're on a machine with multiple GPUs (like a laptop with both an Intel integrated GPU and an NVIDIA GPU), ensure your browser/TETR.IO Desktop is using the high-performance dedicated GPU. Instructions for this differ from machine to machine, but generally you want to take a look in either the NVIDIA Control Panel or the AMD Catalyst. In Windows 10, it might also be in the PC Settings app.</p>
+					<h1>5. Change your graphics settings in the Config</h1>
+					<p>This may seem obvious, but check anyway. The important options in Config are:</p>
+					<ul>
+						<li><b>GRAPHICS</b> &mdash; how good the graphics look. <b>Set to MINIMAL for best performance.</b> Doing so locks some of the settings that are listed below to their optimal position - those are marked with an asterisk (*).</li>
+						<li><b>RENDER AT A LOW RESOLUTION*</b> &mdash; this causes the game to render at a lower resolution, which makes it look more blurry, but also saves a lot of processing power. <b>ENABLE for best performance.</b></li>
+						<li><b>WEBGL MODE</b> &mdash; the version of WebGL that will be used. If you are seeing unexplainable artifacts or flickering, try a lower WebGL version. <b>Set to WEBGL 2 for best performance.</b></li>
+						<li><b>ACTION TEXT*</b> &mdash; what types of on-screen text will be displayed for special moves. Text is expensive performance-wise, but also very functional... so make sure you don't need these before disabling them. <b>Set to OFF for best performance.</b></li>
+						<li><b>PARTICLE COUNT*</b> &mdash; how many particles appear on screen. <b>Set to 10% for best performance.</b></li>
+						<li><b>LESS PRECISION ON COUNTERS*</b> &mdash; if checked, ingame counters will have less decimal places. <b>ENABLE for best performance.</b></li>
+						<li><b>NO BACKGROUND IN MENUS*</b> &mdash; if checked, the background will not show up in menus. <b>ENABLE for best performance.</b></li>
+						<li><b>ALWAYS SIMPLIFY MULTIPLAYER THUMBNAILS*</b> &mdash; if checked, other players' boards will be less detailed. <b>ENABLE for best performance.</b></li>
+						<li><b>SHOW DUELS SIDE-BY-SIDE*</b> &mdash; if checked, duels will be shown in a side-by-side view. <b>DISABLE for best performance.</b></li>
+						<li><b>HIDE CHAT WHEN INGAME*</b> &mdash; if checked, chat will not be shown ingame. <b>ENABLE for best performance.</b></li>
+						<li><b>WARN ME WHEN I'M IN DANGER*</b> &mdash; if checked, the board will turn red when your stack is very high. <b>DISABLE for best performance.</b></li>
+						<li><b>STEREO*</b> &mdash; this slider decides how much things to the sides of your board will be panned to either side. <b>SET TO 0% (OFF) for best performance.</b></li>
+						<li><b>DISABLE SOUND ENTIRELY</b> &mdash; if checked, no sounds or music will ever play. This increases performance, but the drawback is obvious. <b>ENABLE for best performance.</b></li>
+					</ul>
+					<h1>6. Close other programs and tabs</h1>
+					<p>Make sure you don't have 4 other games open. TETR.IO should be classified as a full desktop game, not a random browser tab. Hence, please give it the breathing room it deserves to be able to utilize your processing power.</p>
+					<h1>7. Make the window smaller or lower your screen resolution</h1>
+					<p>If you make the window smaller or lower your screen resolution, the game has to render less. This will increase your performance greatly.</p>
+					<h1>I tried all this!!!</h1>
+					<p>If you've tried all these steps, and still cannot get TETR.IO playable, your PC may not be able to play TETR.IO. If you need extra help, open DXDiag (hit Windows+R, then type "dxdiag") and save all its data to file. Then, contact me with the DxDiag.txt it creates.</p>
+					<p>Hope this helped you!</p>
+				</td>
+			</tr>
+		</table>
+	</div>
+</body>
+
+<!-- Mirrored from tetr.io/about/performance/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 09 May 2022 00:54:24 GMT -->
+</html>
